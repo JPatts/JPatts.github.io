@@ -2,27 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="/styles.css" />
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles/main.css" />
     <script defer src="scripts/main.js"></script>
   </head>
   <body>
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="internship.html">Internship</a></li>
+        <li><a href="projects.html">School Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+      </ul>
+    </nav>
     <main>
-      <section class="container">
-        <h1>Header message</h1>
-        <img
-          class="img"
-          src="images/Jonah_B&W04_Original.jpg"
-          width="200"
-          alt="Jonah Pattison"
-        />
-        <p class="bio">
-          Hello, my name is Jonah Pattison. This fall term at Portland
-          University I am beginning my senior year. I am taking three courses:
-          Artificial Intelligence, Database Management, and Web Development
-        </p>
+      <section class="content">
+        <section class="bio_section">
+          <img
+            class="bio_image"
+            src="images/Jonah_B&W04_Original.jpg"
+            alt="Black and white image of Jonah Pattison"
+          />
+          <h1>Jonah Pattison</h1>
+          <p class="bio_text">
+            Hello, I'm a senior at Portland State University. Welcome to my
+            personal website. This website exists to showcase my résumé and
+            various projects, school-related, and personal.
+          </p>
+        </section>
       </section>
     </main>
   </body>
