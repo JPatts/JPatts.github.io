@@ -48,7 +48,7 @@ body {
 }
 
 .sidebar li a:hover {
-  background-color: lightblue;
+  background-color: #1d261283;
 }
 
 /* Main Content */
@@ -63,7 +63,7 @@ body {
 }
 
 .bio_section {
-  background-color: rgba(239, 225, 214, 0.2);
+  background-color: #1d26125e;
   border: none;
   padding: 2rem;
   max-width: 600px;
