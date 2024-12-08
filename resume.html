@@ -20,9 +20,20 @@
     <main>
       <section class="content">
         <h1>My Resume</h1>
-        <p>
-          Here you can find my professional experience, education, and skills.
+        <p class="bio_text">
+          Below is a preview of my resume. You can
+          <a href="assets/Pattison_Jonah_Resume.pdf" target="_blank"
+            >download it here</a
+          >
         </p>
+        <div id="my-pdf"></div>
+        <script src="https://drive.google.com/file/d/14GMO91JoAyYZfbWabzsqi_fGRB-ICzZk/view?usp=sharing"></script>
+        <script>
+          PDFObject.embed(
+            "https://drive.google.com/file/d/14GMO91JoAyYZfbWabzsqi_fGRB-ICzZk/view?usp=sharing",
+            "#my-pdf"
+          );
+        </script>
       </section>
     </main>
   </body>

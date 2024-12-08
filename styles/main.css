@@ -111,3 +111,9 @@ body {
   line-height: 1.5;
   max-width: 500px;
 }
+
+/* pdf object container */
+.pdfobject-container {
+  height: 500px;
+  border: 1px solid #ccc;
+}
