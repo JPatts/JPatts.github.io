@@ -132,6 +132,17 @@ body {
   font-size: 1.2rem;
 }
 
+.resume-content h1 {
+  text-align: center;
+  margin-bottom: 1 rem;
+  width: 100%;
+}
+
+.resume-content iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 .top_links {
   display: flex;
   justify-content: left;
@@ -140,7 +151,8 @@ body {
 }
 
 .top_links a img {
-  width: 250px;
+  border: 2px solid var(--black);
+  width: 280px;
   height: 90px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--white);
