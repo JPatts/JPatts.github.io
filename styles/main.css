@@ -131,3 +131,22 @@ body {
 .bio_section ol li strong {
   font-size: 1.2rem;
 }
+
+.top_links {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.top_links a img {
+  width: 250px;
+  height: 90px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--white);
+}
+
+.top_links a img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
