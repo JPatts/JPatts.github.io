@@ -102,12 +102,32 @@ body {
   justify-content: flex-start;
   text-align: left;
   max-width: 600px;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .bio_text {
-  margin-top: 0.5rem;
+  margin-top: 0;
+  padding-top: 1rem;
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.bio_section h1 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.bio_section ol {
   font-size: 1.2em;
   line-height: 1.5;
-  max-width: 500px;
+}
+
+.bio_section ol li {
+  margin-bottom: 1rem;
+}
+
+.bio_section ol li strong {
+  font-size: 1.2rem;
 }

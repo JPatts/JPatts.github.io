@@ -19,7 +19,7 @@
     </nav>
     <main>
       <section class="content">
-        <section class="bio_section">
+        <article class="bio_section">
           <h1>Internship Experience</h1>
           <p class="bio_text">
             The Multiple Engineering Cooperative Program (MECOP) is an
@@ -40,30 +40,34 @@
             and project managers to design a three-part system using Python
             scripts: Identification and Notification:
           </p>
-
-          <p>
-            1. The first script identified non-compliant AWS resources, tracked
-            their creators within the organization, and sent targeted email
-            notifications requesting the addition of appropriate tags.
-          </p>
-          <p>
-            2. Automated Tagging: If resources remained untagged, a second
-            script automated the tagging process by analyzing relevant data and
-            appending accurate tag keys and values to the resources.
-          </p>
-          <p>
-            3. Dormant Resource Reporting: The final script detected AWS
-            resources that had been auto-tagged but subsequently left in a
-            dormant state. It generated a detailed report of these dormant
-            resources, which was then emailed to the cloud team management for
-            review and potential deletion.
-          </p>
+          <ol>
+            <li>
+              <strong>Identification & Notification:</strong> The first script
+              identified non-compliant AWS resources, tracked their creators
+              within the organization, and sent targeted email notifications
+              requesting the addition of appropriate tags.
+            </li>
+            <li>
+              <strong>Automated Tagging:</strong> If resources remained
+              untagged, a second script automated the tagging process by
+              analyzing relevant data and appending accurate tag keys and values
+              to the resources.
+            </li>
+            <li>
+              <strong>Resource Reporting:</strong> The final script detected AWS
+              resources that had been auto-tagged but subsequently left in a
+              dormant state. It generated a detailed report of these dormant
+              resources, which was then emailed to the cloud team management for
+              review and potential deletion.
+            </li>
+          </ol>
           <p class="bio_text">
             This project was a significant step toward improving operational
             efficiency and resource management within PGE's cloud
-            infrastructure.
+            infrastructure. This project used various technologies such as:
+            Python+Boto3, Bitbucket, Windows PowerSell, AWS, and Jenkins.
           </p>
-        </section>
+        </article>
       </section>
     </main>
   </body>
