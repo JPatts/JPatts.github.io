@@ -162,3 +162,30 @@ body {
   transform: scale(1.1);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
+
+/* for photography.html */
+/* gallery styles */
+.gallery {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.gallery h2 {
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.gallery-section img {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  height: auto;
+  object-fit: cover;
+}
