@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Website</title>
+    <title>Contact - My Personal Website</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/contact.js"></script>
   </head>
   <body>
     <nav class="sidebar">
@@ -18,6 +18,58 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <h1 class="page-title">Get in touch:</h1>
+      <section class="contact-container">
+        <fieldset class="inquiry-fieldset">
+          <legend>What is your inquiry regarding?</legend>
+          <label
+            ><input type="radio" name="inquiry" value="Software Development" />
+            Software Development</label
+          >
+          <label
+            ><input type="radio" name="inquiry" value="Photography" />
+            Photography</label
+          >
+          <label
+            ><input type="radio" name="inquiry" value="Other" /> Other</label
+          >
+        </fieldset>
+        <form class="signup-form">
+          <h2>Contact Form</h2>
+          <p>Please provide your name and email address.</p>
+
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="social-section">
+          <h3>Or get in touch by my social media pages:</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/jonah-pattison-ba0481275/"
+              target="_blank"
+            >
+              <img src="assets/linkedin_icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/jonah.pattison/" target="_blank">
+              <img src="assets/instagram_icon.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

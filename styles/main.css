@@ -132,6 +132,27 @@ body {
   font-size: 1.2rem;
 }
 
+/* Internship specific styles */
+.internship-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.internship-content .bio_section {
+  max-width: 800px;
+}
+
+.internship-content .top_links {
+  justify-content: center;
+}
+
+.internship-content ol {
+  text-align: left;
+}
+
+/* Reseume specific styles */
 .resume-content h1 {
   text-align: center;
   margin-bottom: 1 rem;
@@ -191,6 +212,7 @@ body {
   object-fit: cover;
 }
 
+/* if page gets to small align photos one-by-one */
 @media (max-width: 768px) {
   .gallery-section {
     flex-direction: column;
@@ -215,4 +237,126 @@ body {
 .content.photography-content p {
   margin-top: 0;
   line-height: 1.6;
+}
+
+/* code for form on contact page */
+.page-title {
+  margin-left: calc(200px + 2rem);
+  font-size: 2rem;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Inquiry Fieldset */
+.inquiry-fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.inquiry-fieldset legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.inquiry-fieldset label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Form Styling */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form h2 {
+  margin-top: 0;
+}
+
+.signup-form p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-group button[type="reset"] {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.button-group button:hover {
+  opacity: 0.9;
+}
+
+/* Social Media Section */
+.social-section h3 {
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icons a img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }

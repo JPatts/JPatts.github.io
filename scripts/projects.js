@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // main header
   const mainHeader = document.createElement("h1");
-  mainHeader.textContent = "School Projects";
+  mainHeader.textContent = "Projects";
   mainHeader.style.textAlign = "center";
   mainHeader.style.marginBottom = "2rem";
   mainHeader.style.fontSize = "1.5rem";
