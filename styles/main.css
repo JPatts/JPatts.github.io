@@ -156,6 +156,7 @@ body {
   height: 90px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--white);
+  object-fit: contain;
 }
 
 .top_links a img:hover {
@@ -190,10 +191,21 @@ body {
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .gallery-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-section img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 /* specifc styles needed for realiging text on photography.html */
 .content.photography-content {
   display: block;
-  padding-top: 2rem;
 }
 
 .content.photography-content h1 {
