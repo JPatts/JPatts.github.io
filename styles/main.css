@@ -189,3 +189,18 @@ body {
   height: auto;
   object-fit: cover;
 }
+
+/* specifc styles needed for realiging text on photography.html */
+.content.photography-content {
+  display: block;
+  padding-top: 2rem;
+}
+
+.content.photography-content h1 {
+  margin-bottom: 1rem;
+}
+
+.content.photography-content p {
+  margin-top: 0;
+  line-height: 1.6;
+}
