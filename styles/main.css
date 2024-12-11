@@ -446,6 +446,10 @@ body {
 
 /* mobile media query */
 @media (max-width: 480px) {
+  main {
+    margin-top: 3.5rem;
+  }
+
   .sidebar {
     display: none;
     transform: translateX(-100%);
