@@ -9,7 +9,9 @@
   --gray-20: #ededf0;
   --light-gray: #f0f0f4;
   --stone-blue: #59788e;
+  --highlighter: #cfff04;
   --sidebar-width: 200px;
+  --shadow: rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -38,7 +40,7 @@ body {
 .sidebar ul {
   list-style-type: none;
   margin: 0;
-  padding: 1;
+  padding: 1rem;
 }
 
 .sidebar li a {
@@ -48,12 +50,9 @@ body {
   text-align: left;
   text-decoration: none;
   border-bottom: 2px solid var(--gray);
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .sidebar li a::before {
@@ -63,7 +62,7 @@ body {
   left: -100%;
   width: 100%;
   height: 1.5rem;
-  background-color: #cfff04;
+  background-color: var(--highlighter);
   transform: translateY(-50%);
   z-index: -1;
   transition: left 0.3s ease;
@@ -78,6 +77,21 @@ body {
   left: 0;
 }
 
+/* hamburger menu for mobile screens */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 9999;
+  color: var(--black);
+  background: var(--white);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
 /* Main Content */
 .content {
   margin-left: calc(var(--sidebar-width) + 3rem);
@@ -88,16 +102,16 @@ body {
   padding-top: 2rem;
 }
 
-.bio_image {
+.bio-image {
   width: 400px;
   height: 450px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--shadow);
   margin-right: 1.5rem;
 }
 
-.bio_section {
+.bio-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -107,7 +121,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.bio_text {
+.bio-text {
   margin-top: 0;
   padding-top: 1rem;
   font-size: 1.2em;
@@ -115,22 +129,18 @@ body {
   max-width: 500px;
 }
 
-.bio_section h1 {
+.bio-section h1 {
   margin-top: 0;
   padding-top: 0;
 }
 
-.bio_section ol {
+.bio-section ol {
   font-size: 1.2em;
   line-height: 1.5;
 }
 
-.bio_section ol li {
+.bio-section ol li {
   margin-bottom: 1rem;
-}
-
-.bio_section ol li strong {
-  font-size: 1.2rem;
 }
 
 /* Internship specific styles */
@@ -141,11 +151,17 @@ body {
   text-align: center;
 }
 
-.internship-content .bio_section {
+.internship-content .bio-section {
   max-width: 800px;
 }
 
-.internship-content .top_links {
+.bio-section p,
+.bio-section ol {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.internship-content .top-links {
   justify-content: center;
 }
 
@@ -153,27 +169,15 @@ body {
   text-align: left;
 }
 
-/* Reseume specific styles */
-.resume-content h1 {
-  text-align: center;
-  margin-bottom: 1 rem;
-  width: 100%;
-}
-
-.resume-content iframe {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-.top_links {
+.top-links {
   display: flex;
   justify-content: left;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.top_links a img {
-  border: 2px solid var(--black);
+.top-links a img {
+  border: 5px solid var(--white);
   width: 280px;
   height: 90px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -181,9 +185,22 @@ body {
   object-fit: contain;
 }
 
-.top_links a img:hover {
+.top-links a img:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Reseume specific styles */
+.resume-content h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.resume-content iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* for photography.html */
@@ -194,7 +211,7 @@ body {
 }
 
 .gallery h2 {
-  margin: 1.5rem 0 1rem;
+  font-weight: normal;
   font-size: 1.5rem;
   color: var(--black);
 }
@@ -213,19 +230,6 @@ body {
   object-fit: cover;
 }
 
-/* if page gets to small align photos one-by-one */
-@media (max-width: 768px) {
-  .gallery-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery-section img {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
 /* specifc styles needed for realiging text on photography.html */
 .content.photography-content {
   display: block;
@@ -233,11 +237,13 @@ body {
 
 .content.photography-content h1 {
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .content.photography-content p {
   margin-top: 0;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* code for form on contact page */
@@ -251,14 +257,14 @@ body {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--gray-20);
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 /* Inquiry Fieldset */
 .inquiry-fieldset {
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-20);
   border-radius: 5px;
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -273,7 +279,7 @@ body {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: #555;
+  color: var(--gray);
 }
 
 /* Form Styling */
@@ -287,7 +293,7 @@ body {
 }
 
 .signup-form p {
-  color: #666;
+  color: var(--gray);
   margin-bottom: 1.5rem;
 }
 
@@ -304,7 +310,7 @@ body {
 
 .form-group input {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-20);
   border-radius: 5px;
 }
 
@@ -323,9 +329,13 @@ body {
   cursor: pointer;
 }
 
+.button-group button:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 0 5px var(--shadow);
+}
+
 .button-group button[type="submit"] {
   background-color: var(--stone-blue);
-  /* background-color: #007bff; */
   color: var(--white);
   border: 1px solid var(--gray);
 }
@@ -379,4 +389,97 @@ body {
 
 .social-icons a:hover {
   color: var(--stone-blue);
+}
+
+/* tablet media query */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .bio-image,
+  .bio-section {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar ul li a {
+    font-size: 1.2em;
+  }
+
+  .gallery-section img {
+    flex: 1 1 calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
+  }
+
+  .page-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .resume-content iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* mobile media query */
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .content {
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-image,
+  .bio-section,
+  .gallery-section img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .gallery-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-section img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .page-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .resume-content iframe {
+    width: 100%;
+    height: auto;
+  }
 }
