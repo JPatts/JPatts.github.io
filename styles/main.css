@@ -445,7 +445,90 @@ textarea {
 
   .resume-content iframe {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
+  }
+
+  .contact-container {
+    margin-top: 5rem;
+    padding: 1.5rem;
+  }
+
+  .sidebar {
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 2rem;
+  }
+}
+
+/* media query for ipads */
+/* For standard tablets */
+@media (max-width: 810px) {
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .bio-image,
+  .bio-section {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar ul li a {
+    font-size: 1.2em;
+  }
+
+  .top-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-links a img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-section img {
+    flex: 1 1 calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
+  }
+
+  .page-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .resume-content iframe {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .contact-container {
+    margin-top: 5rem;
+    padding: 1.5rem;
+  }
+
+  .sidebar {
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 2rem;
   }
 }
 
@@ -522,7 +605,7 @@ textarea {
 
   .resume-content iframe {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
   }
 
   /* added to specifcally reformat Projects page */

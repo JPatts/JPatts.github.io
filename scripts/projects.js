@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
   AI_header.style.textDecoration = "underline";
   container.appendChild(AI_header);
 
-  // Create the first row (Text box on the left, image on the right)
+  // Create the first row in order to place text box on the left and image right
   const row1 = document.createElement("div");
   row1.className = "project-row";
   row1.style.display = "flex";
   row1.style.justifyContent = "space-between";
   row1.style.marginBottom = "2rem";
 
-  // Text box (top left)
+  // row1 top left text box
   const introTextBox = document.createElement("div");
   introTextBox.innerHTML = `
       <h2>Project Introduction</h2>
