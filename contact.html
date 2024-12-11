@@ -6,6 +6,7 @@
     <title>Contact - My Personal Website</title>
     <link rel="stylesheet" href="styles/main.css" />
     <script defer src="scripts/contact.js"></script>
+    <!-- required for icons -->
     <script
       src="https://kit.fontawesome.com/68ffdfe357.js"
       crossorigin="anonymous"
@@ -25,23 +26,33 @@
     <main>
       <h1 class="page-title">Get in touch:</h1>
       <section class="contact-container">
-        <fieldset class="inquiry-fieldset">
-          <legend>What is your inquiry regarding?</legend>
-          <label
-            ><input type="radio" name="inquiry" value="Software Development" />
-            Software Development</label
-          >
-          <label
-            ><input type="radio" name="inquiry" value="Photography" />
-            Photography</label
-          >
-          <label
-            ><input type="radio" name="inquiry" value="Other" /> Other</label
-          >
-        </fieldset>
-        <form class="signup-form">
+        <!-- required for form on contact page to send email  -->
+        <form
+          action="https://formspree.io/f/meoqwrpr"
+          method="POST"
+          class="signup-form"
+        >
+          <fieldset class="inquiry-fieldset">
+            <legend>What is your inquiry regarding?</legend>
+            <label
+              ><input
+                type="radio"
+                name="inquiry"
+                value="Software Development"
+              />
+              Software Development</label
+            >
+            <label
+              ><input type="radio" name="inquiry" value="Photography" />
+              Photography</label
+            >
+            <label
+              ><input type="radio" name="inquiry" value="Other" /> Other</label
+            >
+          </fieldset>
+
           <h2>Contact Form</h2>
-          <p>Please provide your name and email address</p>
+          <p>Please provide your name and email address:</p>
 
           <div class="form-group">
             <label for="name">Name:</label>
@@ -58,20 +69,17 @@
             <button type="reset">Reset</button>
           </div>
         </form>
-
         <div class="social-section">
           <h3>Or get in touch through my social media pages:</h3>
           <div class="social-icons">
-            <!-- LinkedIn -->
             <a
               href="https://www.linkedin.com/in/jonah-pattison-ba0481275/"
               target="_blank"
             >
-              <i class="fa-brands fa-linkedin">LinkedIn</i>
+              <i class="fa-brands fa-linkedin"></i>LinkedIn
             </a>
-            <!-- Instagram -->
             <a href="https://www.instagram.com/jonah.pattison/" target="_blank">
-              <i class="fa-brands fa-instagram">Instagram</i>
+              <i class="fa-brands fa-instagram"></i>Instagram
             </a>
           </div>
         </div>

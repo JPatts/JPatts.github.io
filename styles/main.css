@@ -374,7 +374,7 @@ body {
 .social-icons a {
   text-decoration: none;
   font-size: 36px;
-  color: #333;
+  color: var(--gray);
 }
 
 .social-icons a:hover {
