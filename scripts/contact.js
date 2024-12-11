@@ -14,11 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
   const sidebar = document.querySelector(".sidebar");
 
-  if (hamburger && sidebar) {
-    hamburger.addEventListener("click", () => {
+  if (mobileMenuButton && sidebar) {
+    mobileMenuButton.addEventListener("click", () => {
+      /*
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      */
       sidebar.classList.toggle("active");
     });
   }
