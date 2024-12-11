@@ -40,10 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   introTextBox.innerHTML = `
       <h2>Project Introduction</h2>
       <p>
-      This project was the final assignment for Computer Science elective course CS-441 Artificial Intelligence. 
-      My group members and I were tasked with comparing and contrasting two different types of AI techniques we learned about during the term.
-      We took a literal approach and decided to pit two AI agents against each other in a game.
-      Inspired by the classic arcade game PacMan we created a cat-and-mouse style game in which one AI agent attempts to catch the other while the other AI agent attempts to flee.
+      This project was the final assignment for the computer science elective course CS-441 Artificial Intelligence. My group members and I were tasked with comparing and contrasting two different types of AI techniques we learned about during the term. We took a literal approach and decided to pit two AI agents against each other in a game. Inspired by the classic arcade game PacMan, we created a cat-and-mouse-style game in which one AI agent attempts to catch the other while the other AI agent attempts to flee. 
       </p>`;
   introTextBox.querySelector("h2").style.fontSize = "1.2rem";
   introTextBox.style.flex = "1";
@@ -70,11 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   descriptionBox.innerHTML = `
       <h2>Project Description</h2>
       <p>
-      My group members and I decided to create a Human vs Zombie python game in which the Human agent used the popular best-path algorithm A Star Search and the Zombie agent was one that would learn to preform better over time using a reinforcement system.
-      This GIF above shows one of the earlier trials in which the Zombie agent does not have much experience chasing and catching the Human agent. 
-      The zombie is making pseudo-random moves influenced by reward system that ecourages proximity to the Human agent.
-      The path that is generation from the Human character is the A* Path visualized leading it to the small yellow square that is the furthest grid point found away from the Zombie agent.
-      This furthest grid point from Zombie and A* Path is recalculated with every move.
+      My group members and I decided to create a Human vs. Zombie Python game in which the human agent used the popular best-path algorithm A* Search and the zombie agent was one that would learn to perform better over time using a reinforcement learning system. This GIF below shows one of the earlier trials in which the zombie agent does not have much experience chasing and catching the human agent. The zombie is making pseudo-random moves influenced by a reward system that encourages proximity to the human agent. The path that is generated from the human character is the A* path visualized, leading it to the small yellow square that is the furthest grid point found away from the zombie agent. This furthest grid point from Zombie and A* Path is recalculated with every move.
       </p>`;
   descriptionBox.querySelector("h2").style.fontSize = "1.2rem";
   descriptionBox.style.width = "100%";
@@ -101,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Paragraph below the GIF
   const gifDescription = document.createElement("p");
   gifDescription.textContent =
-    "The zombie learns and improves its performance over time, creating more challenging gameplay as it adapts. The graph below shows the average number of steps taken per every ten trails. The graph shows as astonishing learning rate form the Zombie agent that begins the first ten trials making an average of 137,000 moves, and yet by trial 170 the Zombie has learned the minimum amount of moves to take in order to catch the Human agent and is able to preform at this advanced rate over and over again throughout the rest of the trials.";
+    "The zombie learns and improves its performance over time, creating more challenging gameplay as it adapts. The graph below shows the average number of steps taken per every ten trials. The graph shows an astonishing learning rate from the Zombie agent that begins the first ten trials, making an average of 137,000 moves, and yet by trial 170 the Zombie has learned the minimum amount of moves to take in order to catch the Human agent and is able to perform at this advanced rate over and over again throughout the rest of the trials.";
   gifDescription.style.textAlign = "left";
   gifDescription.style.marginBottom = "1.5rem";
   gifDescription.style.padding = "1rem";
