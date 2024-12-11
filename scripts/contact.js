@@ -14,14 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileTopBar = document.querySelector(".mobile-top-bar");
   const sidebar = document.querySelector(".sidebar");
 
-  if (mobileMenuButton && sidebar) {
-    mobileMenuButton.addEventListener("click", () => {
-      /*
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      */
+  if (mobileTopBar && sidebar) {
+    mobileTopBar.addEventListener("click", () => {
       sidebar.classList.toggle("active");
     });
   }
