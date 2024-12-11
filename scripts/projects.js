@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   container.appendChild(mainHeader);
 
   // Create header and place on top left
-  const AI_header = document.createElement("h1");
+  const AI_header = document.createElement("h2");
   AI_header.textContent = "Artificial Intelligence Research Project";
   AI_header.style.textAlign = "left";
   AI_header.style.marginBottom = "1rem";
