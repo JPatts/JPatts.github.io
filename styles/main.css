@@ -88,6 +88,16 @@ body {
   padding-top: 2rem;
 }
 
+.main-heading {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--black);
+  padding: 10px 20px;
+  margin: 20px 0;
+  width: 100%;
+  flex-basis: 100%;
+}
+
 .bio-image {
   width: 400px;
   height: 450px;
