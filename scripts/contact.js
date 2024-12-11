@@ -8,12 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Handle form submission
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent default form submission
 
     // Collect form data
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
 
     // Validation
     const errors = [];
@@ -24,12 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
       // Output errors to console and alert user
       console.error("Form submission failed. Errors:", errors);
       alert("Please fill out all required fields.");
-    } else {
-      // Log form data to console
-      console.log("Form submitted successfully:", data);
+      return;
+    }
 
-      // Reset the form
-      form.reset();
+    try {
+      const reponse = await fetch("https://formspree.io/f/meoqwrpr", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (reponse.ok) {
+        alert("Message sent successfully");
+        form.requestFullscreen();
+      } else {
+        const errorData = await Response.json();
+        console.error("Form submission error:", errorData);
+        alert("Error. Please Try Again.");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      alert("Network Error. Try Again.");
     }
   });
 });
