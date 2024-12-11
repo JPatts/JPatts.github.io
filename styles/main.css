@@ -25,7 +25,7 @@ body {
   background-attachment: fixed;
 }
 
-/* side bar */
+/* SIDE BAR MENU  28 - 78 */
 .sidebar {
   position: fixed;
   top: 0;
@@ -77,6 +77,7 @@ body {
   left: 0;
 }
 
+/* HOME PAGE 80 - 130 */
 /* Main Content */
 .content {
   margin-left: calc(var(--sidebar-width) + 3rem);
@@ -92,7 +93,7 @@ body {
   height: 450px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 6px var(--shadow);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   margin-right: 1.5rem;
 }
 
@@ -128,6 +129,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* RESUME PAGE 131 - 177 */
 /* Internship specific styles */
 .internship-content {
   display: flex;
@@ -175,6 +177,7 @@ body {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* RESUME PAGE 178 - 190 */
 /* Reseume specific styles */
 .resume-content h1 {
   text-align: center;
@@ -188,7 +191,7 @@ body {
   max-height: 100%;
 }
 
-/* for photography.html */
+/* PHOTOGRAPHY PAGE 191 - 232 */
 /* gallery styles */
 .gallery {
   margin-top: 2rem;
@@ -231,7 +234,7 @@ body {
   text-align: center;
 }
 
-/* code for form on contact page */
+/* CONTACT PAGE 234 - 397 */
 .page-title {
   margin-left: calc(200px + 2rem);
   font-size: 2rem;
@@ -396,6 +399,8 @@ textarea {
   font-weight: bold;
 }
 
+/* tablet media query */
+/* For standard tablets */
 @media (max-width: 768px) {
   .content {
     margin-left: 0;
@@ -480,7 +485,7 @@ textarea {
 }
 
 /* tablet media query */
-/* For standard tablets */
+/* For various ipads */
 @media (max-width: 810px) {
   .content {
     margin-left: 0;
@@ -565,7 +570,7 @@ textarea {
 }
 
 /* media query for ipads */
-/* For standard tablets */
+/* For larger ipads */
 @media (max-width: 1024px) {
   .content {
     margin-left: 0;
