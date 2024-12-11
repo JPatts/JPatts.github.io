@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create the first row (Text box on the left, image on the right)
   const row1 = document.createElement("div");
+  row1.className = "project-row";
   row1.style.display = "flex";
   row1.style.justifyContent = "space-between";
   row1.style.marginBottom = "2rem";
@@ -142,4 +143,42 @@ document.addEventListener("DOMContentLoaded", () => {
       sidebar.classList.toggle("active");
     });
   }
+});
+
+// Below is update for reformatting first text box and image for different sized screens
+document.addEventListener("DOMContentLoaded", () => {
+  const row1 = document.querySelector(".projects-content div: first-child");
+
+  function updateLayoutForMobile() {
+    if (windowinnerWidth <= 768) {
+      row1.syle.flexDirection = "column";
+      row1.style.alignItems = "center";
+    } else {
+      row1.style.flexDirection = "row";
+      row1.style.alignItems = "flex-start";
+    }
+  }
+  function updateLayoutForMobile() {
+    if (windowinnerWidth <= 480) {
+      row1.syle.flexDirection = "column";
+      row1.style.alignItems = "center";
+    } else {
+      row1.style.flexDirection = "row";
+      row1.style.alignItems = "flex-start";
+    }
+  }
+
+  function updateLayoutForMobile() {
+    if (windowinnerWidth <= 390) {
+      row1.syle.flexDirection = "column";
+      row1.style.alignItems = "center";
+    } else {
+      row1.style.flexDirection = "row";
+      row1.style.alignItems = "flex-start";
+    }
+  }
+
+  updateLayoutForMobile();
+
+  window.addEventListener("resize", updateLayoutForMobile);
 });

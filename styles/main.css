@@ -235,7 +235,7 @@ body {
 .page-title {
   margin-left: calc(200px + 2rem);
   font-size: 2rem;
-  color: #333;
+  color: var(--black);
 }
 
 .contact-container {
@@ -249,7 +249,7 @@ body {
 
 /* Inquiry Fieldset */
 .inquiry-fieldset {
-  border: 1px solid var(--gray-20);
+  border: 1px solid var(--black);
   border-radius: 5px;
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -278,7 +278,7 @@ body {
 }
 
 .signup-form p {
-  color: var(--gray);
+  color: var(--black);
   margin-bottom: 1.5rem;
 }
 
@@ -295,8 +295,12 @@ body {
 
 .form-group input {
   padding: 0.5rem;
-  border: 1px solid var(--gray-20);
+  border: 1px solid var(--black);
   border-radius: 5px;
+}
+
+textarea {
+  border: 1px solid var(--black);
 }
 
 /* Button Group */
@@ -520,6 +524,28 @@ body {
     width: 100%;
     height: 100vh;
   }
+
+  /* added to specifcally reformat Projects page */
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-row img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* for contact html */
+  .contact-container {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .form-group input,
+  textarea {
+    width: 100%;
+  }
 }
 
 /* Media Query for iphone 16 and other modern devices */
@@ -596,5 +622,27 @@ body {
   .resume-content iframe {
     width: 100%;
     height: 100vh;
+  }
+
+  /* added to specifcally reformat Projects page */
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-row img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* for contact html */
+  .contact-container {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .form-group input,
+  textarea {
+    width: 100%;
   }
 }
